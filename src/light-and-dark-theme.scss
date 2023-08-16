@@ -1,0 +1,34 @@
+@use './variable.scss' as var;
+
+@mixin light-and-dark-theme {
+  [data-theme='light'] {
+    body,
+    .grocery,
+    .grocery-item:hover {
+      background-color: var.$clr-grey-10;
+    }
+    .grocery-form h3 {
+      color: var.$clr-primary-1;
+    }
+    .section-center {
+      background-color: var.$clr-white;
+    }
+  }
+  [data-theme='dark'] {
+    body,
+    .grocery,
+    .grocery-item:hover {
+      background-color: var.$clr-grey-10-dark;
+    }
+    .grocery-form h3 {
+      color: var.$clr-primary-1-dark;
+    }
+    .section-center {
+      background-color: var.$clr-dark;
+    }
+    .theme {
+      color: var.$clr-primary-2;
+      border: 2px solid var.$clr-grey-3;
+    }
+  }
+}
